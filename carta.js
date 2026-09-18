@@ -50,9 +50,17 @@ abrirCarta.addEventListener("click", () => {
 // TEXTO DE LA CARTA
 // ========================================
 
-const mensaje = `Quería darte un pequeño detalle.
+const mensaje = `Locuritaa quería darte un pequeño detalle.
 
-No hace falta que exista una fecha especial
+Queria hacer esta pequeña carta, porque de verdad no eh dejado 
+de pensar en ti
+ puede que suene chistoso, pero de verdad
+pero de verdaddd... ME GUSTAS, ME ENCANTAS
+ es un poco dificil poder expresar estos sentimientos, pero que bueno
+que estudio para diseñar estas cositas...
+Me gustaria ser más que un amigo para ti...
+porque quiero abrazarte, besarte, andar de la mano contigo
+ No hace falta que exista una fecha especial
 para recordarle a alguien lo importante
 que puede llegar a ser.
 
