@@ -52,15 +52,20 @@ abrirCarta.addEventListener("click", () => {
 
 const mensaje = `Locuritaa quería darte un pequeño detalle.
 
-Queria hacer esta pequeña carta, porque de verdad no eh dejado 
+Queria hacer esta pequeña carta, para decirte que no eh dejado 
 de pensar en ti
 puede que suene chistoso, pero de verdad
-pero de verdaddd... ME GUSTAS, ME ENCANTAS
+pero de adeveritasss... ME GUSTAS, ME ENCANTAS...
+eres muy bonita, hermosa, maravillosa, bien locaaa
+pero asi me gustas desde que te vi, la primera vez
 es un poco dificil poder expresar estos sentimientos, pero que bueno
-que estudio para diseñar estas cositas...
+que diseño estas cositas...
+
 Me gustaria ser más que un amigo para ti...
+
 porque quiero abrazarte, besarte, andar de la mano contigo
- No hace falta que exista una fecha especial
+poder hablar todos los dias, regalarte algunas cositas...
+No hace falta que exista una fecha especial
 para recordarle a alguien lo importante
 que puede llegar a ser.
 
