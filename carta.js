@@ -145,7 +145,7 @@ abrirRegalo.addEventListener("click", () => {
 
 function lanzarFlores() {
 
-    const cantidad = 110;
+    const cantidad = 120;
 
     for (let i = 0; i < cantidad; i++) {
 
