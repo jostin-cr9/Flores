@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top, #24204a, #090718 70%);
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    position: relative;
+}
+
+
+/* =========================
+   ESTRELLAS
+========================= */
+
+.estrellas::before,
+.estrellas::after {
+    content: "✦  ·  ✧   ·  ✦   ·   ✧  ·  ✦";
+
+    position: absolute;
+
+    width: 100%;
+    top: 10%;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 18px;
+
+    letter-spacing: 20px;
+
+    animation: parpadear 3s infinite alternate;
+}
+
+.estrellas::after {
+    top: 30%;
+    font-size: 12px;
+    animation-delay: 1s;
+}
+
+@keyframes parpadear {
+    from {
+        opacity: 0.25;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    position: relative;
+    z-index: 10;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.pequeno {
+    font-size: 16px;
+
+    color: #f8df7b;
+
+    margin-bottom: 15px;
+
+    opacity: 0;
+
+    animation: aparecer 2s forwards;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 70px);
+
+    line-height: 1.1;
+
+    color: #ffd83d;
+
+    text-shadow:
+        0 0 10px rgba(255, 216, 61, 0.5),
+        0 0 30px rgba(255, 216, 61, 0.3);
+
+    opacity: 0;
+
+    animation: aparecer 2s 1s forwards;
+}
+
+.mensaje {
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #eeeeee;
+
+    opacity: 0;
+
+    animation: aparecer 2s 2s forwards;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+button {
+    margin-top: 35px;
+
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    background: #ffd83d;
+
+    color: #332800;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(255, 216, 61, 0.4);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    opacity: 0;
+
+    animation: aparecer 2s 3s forwards;
+}
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 30px rgba(255, 216, 61, 0.8);
+}
+
+#sorpresa {
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    color: #fff2a8;
+
+    min-height: 30px;
+}
+
+
+/* =========================
+   FLORES
+========================= */
+
+.jardin {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 280px;
+
+    z-index: 5;
+}
+
+.flor {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 130px;
+    height: 250px;
+
+    transform-origin: bottom center;
+
+    animation: moverFlor 4s ease-in-out infinite alternate;
+}
+
+.flor1 {
+    left: 5%;
+}
+
+.flor2 {
+    left: 28%;
+
+    transform: scale(0.8);
+
+    animation-delay: 1s;
+}
+
+.flor3 {
+    right: 25%;
+
+    transform: scale(0.9);
+
+    animation-delay: 0.5s;
+}
+
+.flor4 {
+    right: 4%;
+
+    transform: scale(0.75);
+
+    animation-delay: 1.5s;
+}
+
+
+/* TALLO */
+
+.tallo {
+    position: absolute;
+
+    width: 8px;
+    height: 190px;
+
+    background: linear-gradient(
+        to right,
+        #245c2a,
+        #4d9c45,
+        #245c2a
+    );
+
+    left: 61px;
+    bottom: 0;
+
+    border-radius: 10px;
+}
+
+
+/* HOJAS */
+
+.tallo::before,
+.tallo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45px;
+    height: 20px;
+
+    background: #43853c;
+
+    border-radius: 100% 0 100% 0;
+}
+
+.tallo::before {
+    left: -40px;
+    top: 100px;
+
+    transform: rotate(-25deg);
+}
+
+.tallo::after {
+    right: -40px;
+    top: 140px;
+
+    transform: rotate(25deg) scaleX(-1);
+}
+
+
+/* PÉTALOS */
+
+.petalos {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    top: 0;
+    left: 0;
+
+    animation: crecer 2s ease-out forwards;
+}
+
+.petalos span {
+    position: absolute;
+
+    width: 48px;
+    height: 75px;
+
+    background: linear-gradient(
+        to bottom,
+        #fff04a,
+        #ffc928
+    );
+
+    border-radius: 50%;
+
+    left: 41px;
+    top: 27px;
+
+    transform-origin: 24px 40px;
+
+    box-shadow:
+        0 0 12px rgba(255, 221, 50, 0.5);
+}
+
+.petalos span:nth-child(1) {
+    transform: rotate(0deg) translateY(-35px);
+}
+
+.petalos span:nth-child(2) {
+    transform: rotate(45deg) translateY(-35px);
+}
+
+.petalos span:nth-child(3) {
+    transform: rotate(90deg) translateY(-35px);
+}
+
+.petalos span:nth-child(4) {
+    transform: rotate(135deg) translateY(-35px);
+}
+
+.petalos span:nth-child(5) {
+    transform: rotate(180deg) translateY(-35px);
+}
+
+.petalos span:nth-child(6) {
+    transform: rotate(225deg) translateY(-35px);
+}
+
+.petalos span:nth-child(7) {
+    transform: rotate(270deg) translateY(-35px);
+}
+
+.petalos span:nth-child(8) {
+    transform: rotate(315deg) translateY(-35px);
+}
+
+
+/* CENTRO */
+
+.centro {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    background: radial-gradient(
+        circle,
+        #5d3511,
+        #2c1707
+    );
+
+    border-radius: 50%;
+
+    top: 41px;
+    left: 41px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes crecer {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes moverFlor {
+    from {
+        rotate: -2deg;
+    }
+
+    to {
+        rotate: 2deg;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .jardin {
+        height: 210px;
+    }
+
+    .flor {
+        transform: scale(0.55);
+    }
+
+    .flor2 {
+        display: none;
+    }
+
+    .flor3 {
+        display: none;
+    }
+
+    .flor1 {
+        left: -10px;
+    }
+
+    .flor4 {
+        right: -10px;
+    }
+
+    .mensaje {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
